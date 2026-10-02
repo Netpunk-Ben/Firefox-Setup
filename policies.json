@@ -7,6 +7,8 @@
     "DisableSetDesktopBackground": true,
     "DontCheckDefaultBrowser": true,
     "NoDefaultBookmarks": true,
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": "",
     "OfferToSaveLogins": false,
     "PasswordManagerEnabled": false,
     "HttpsOnlyMode": "enabled",
@@ -50,6 +52,16 @@
       "SkipOnboarding": true,
       "MoreFromMozilla": false,
       "Locked": false
+    },
+    "AIControls": {
+      "Default": {
+        "Value": "blocked",
+        "Locked": false
+      },
+      "Translations": {
+        "Value": "available",
+        "Locked": false
+      }
     },
     "ExtensionSettings": {
       "uBlock0@raymondhill.net": {
