@@ -9,6 +9,10 @@
 user_pref("browser.nova.enabled", true);
 user_pref("browser.compactmode.show", true);
 user_pref("browser.uidensity", 1);
+// Eigenes Theme aus theme/netpunk-dark.xpi
+user_pref("extensions.activeThemeID", "netpunk-dark@netpunk-ben");
+// Webseiten immer hell darstellen, unabhaengig vom dunklen Firefox-Theme (0 = dunkel, 1 = hell, 2 = wie Theme)
+user_pref("layout.css.prefers-color-scheme.content-override", 1);
 user_pref("browser.toolbars.bookmarks.visibility", "always");   // wie die Edge-Favoritenleiste
 user_pref("browser.toolbars.bookmarks.showOtherBookmarks", true); // "Weitere Lesezeichen" rechts, wie in Edge
 
@@ -16,6 +20,10 @@ user_pref("browser.toolbars.bookmarks.showOtherBookmarks", true); // "Weitere Le
 user_pref("sidebar.revamp", true);
 user_pref("sidebar.verticalTabs", true);
 user_pref("browser.tabs.groups.enabled", true);
+// Seitenleiste eingeklappt als Symbolleiste, faehrt bei Mausberuehrung aus (wie Edge)
+user_pref("sidebar.visibility", "expand-on-hover");
+user_pref("sidebar.expandOnHover", true);
+user_pref("sidebar.animation.expand-on-hover.duration-ms", 200);
 
 /** SITZUNG WIEDERHERSTELLEN (Arc, Vivaldi) ***/
 user_pref("browser.startup.page", 3);
