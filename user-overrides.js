@@ -9,7 +9,8 @@
 user_pref("browser.nova.enabled", true);
 user_pref("browser.compactmode.show", true);
 user_pref("browser.uidensity", 1);
-user_pref("browser.toolbars.bookmarks.visibility", "never");
+user_pref("browser.toolbars.bookmarks.visibility", "always");   // wie die Edge-Favoritenleiste
+user_pref("browser.toolbars.bookmarks.showOtherBookmarks", true); // "Weitere Lesezeichen" rechts, wie in Edge
 
 /** VERTIKALE TABS UND TAB-GRUPPEN (Arc, Zen, Edge) ***/
 user_pref("sidebar.revamp", true);
@@ -47,6 +48,16 @@ user_pref("signon.rememberSignons", false);
 user_pref("signon.autofillForms", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.formautofill.addresses.enabled", false);
+
+/** FIREFOX SYNC: was synchronisiert wird (Passwoerter und Zahlungsdaten bleiben bei 1Password) ***/
+user_pref("services.sync.engine.bookmarks", true);
+user_pref("services.sync.engine.history", true);
+user_pref("services.sync.engine.tabs", true);
+user_pref("services.sync.engine.addons", true);
+user_pref("services.sync.engine.prefs", true);
+user_pref("services.sync.engine.passwords", false);
+user_pref("services.sync.engine.addresses", false);
+user_pref("services.sync.engine.creditcards", false);
 
 /** DRM AN, DAMIT NETFLIX UND CO. LAUFEN (anders als LibreWolf) ***/
 user_pref("media.eme.enabled", true);

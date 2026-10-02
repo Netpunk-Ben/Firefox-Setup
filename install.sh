@@ -64,4 +64,5 @@ while IFS= read -r prof; do
 done < <(find_profiles)
 
 echo
-echo "Fertig. Firefox starten, mit Firefox-Konto anmelden, 1Password verbinden."
+echo "Fertig. Firefox oeffnet jetzt die Sync-Anmeldung."
+"$FF_BIN" "about:preferences#sync" >/dev/null 2>&1 &

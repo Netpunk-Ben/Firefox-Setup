@@ -54,4 +54,5 @@ foreach ($p in Get-Profiles) {
     Write-Host "user.js geschrieben: $($p.Name)"
 }
 
-Write-Host "`nFertig. Firefox starten, mit Firefox-Konto anmelden, 1Password verbinden."
+Write-Host "`nFertig. Firefox oeffnet jetzt die Sync-Anmeldung."
+Start-Process "$FfDir\firefox.exe" -ArgumentList "about:preferences#sync"
