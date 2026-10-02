@@ -1,0 +1,39 @@
+/* Netpunk userChrome.css
+   Kleine, gezielte Anpassungen der Firefox-Oberflaeche (geschrieben gegen den Quellcode von Firefox 157 mit Nova).
+   Nach groesseren Firefox-Updates pruefen, ob noch alles greift. */
+
+/* 1) Tuerkis loswerden: Firefox nimmt fuer Hover-Linien und Fokusrahmen die Windows-Akzentfarbe.
+      Stattdessen ueberall den Theme-Akzent verwenden. */
+:root {
+  --focus-outline-color: #c4a7ff !important;
+}
+
+/* 2) Angeheftete Tabs als Kacheln wie bei Zen, auch mit "Beim Ueberfahren ausklappen".
+      Gilt nur, wenn die Seitenleiste ausgeklappt ist. Eingeklappt bleiben sie eine Spalte. */
+#tabbrowser-tabs[orient="vertical"][expanded] > #pinned-tabs-container::part(items-wrapper) {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)) !important;
+  gap: 6px !important;
+  padding-inline: 8px !important;
+  padding-block: 4px 6px !important;
+}
+
+#tabbrowser-tabs[orient="vertical"][expanded] > #pinned-tabs-container .tabbrowser-tab {
+  width: auto !important;
+  padding: 0 !important;
+}
+
+#tabbrowser-tabs[orient="vertical"][expanded] > #pinned-tabs-container .tab-background {
+  margin: 0 !important;
+  min-height: 44px !important;
+  border-radius: 10px !important;
+}
+
+#tabbrowser-tabs[orient="vertical"][expanded] > #pinned-tabs-container .tab-content {
+  justify-content: center !important;
+  padding: 0 !important;
+}
+
+#tabbrowser-tabs[orient="vertical"][expanded] > #pinned-tabs-container :is(.tab-label-container, .tab-close-button) {
+  display: none !important;
+}

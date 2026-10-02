@@ -6,6 +6,7 @@
  ****************************************************************************/
 
 /** OBERFLAECHE: Nova, kompakt ***/
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // userChrome.css erlauben
 user_pref("browser.nova.enabled", true);
 user_pref("browser.compactmode.show", true);
 user_pref("browser.uidensity", 1);

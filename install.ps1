@@ -49,9 +49,13 @@ if (-not (Get-Profiles)) {
 
 # 5. user.js aus Betterfox und eigenen Overrides bauen und in alle Profile schreiben
 $UserJs = (Invoke-WebRequest $Betterfox -UseBasicParsing).Content + "`n`n" + (Get-SetupFile "user-overrides.js")
+$UserChrome = Get-SetupFile "userChrome.css"
 foreach ($p in Get-Profiles) {
     [IO.File]::WriteAllText((Join-Path $p.FullName "user.js"), $UserJs, $Utf8)
-    Write-Host "user.js geschrieben: $($p.Name)"
+    $ChromeDir = Join-Path $p.FullName "chrome"
+    New-Item $ChromeDir -ItemType Directory -Force | Out-Null
+    [IO.File]::WriteAllText((Join-Path $ChromeDir "userChrome.css"), $UserChrome, $Utf8)
+    Write-Host "user.js und userChrome.css geschrieben: $($p.Name)"
 }
 
 Write-Host "`nFertig. Firefox oeffnet jetzt die Sync-Anmeldung."

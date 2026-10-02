@@ -57,10 +57,13 @@ fi
 
 # 4. user.js bauen und verteilen
 USER_JS="$(curl -fsSL "$BETTERFOX")"$'\n\n'"$(get_file user-overrides.js)"
+USER_CHROME="$(get_file userChrome.css)"
 while IFS= read -r prof; do
   [[ -n "$prof" ]] || continue
   printf '%s\n' "$USER_JS" > "$prof/user.js"
-  echo "user.js geschrieben: $prof"
+  mkdir -p "$prof/chrome"
+  printf '%s\n' "$USER_CHROME" > "$prof/chrome/userChrome.css"
+  echo "user.js und userChrome.css geschrieben: $prof"
 done < <(find_profiles)
 
 echo
