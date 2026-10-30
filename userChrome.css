@@ -7,3 +7,16 @@
 :root {
   --focus-outline-color: #c4a7ff !important;
 }
+
+/* 2) Vertikale Tabs mit runden Ecken und etwas Luft, wie die Tableiste in Edge */
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab {
+  padding-block: 1px !important;
+}
+#tabbrowser-tabs[orient="vertical"] .tab-background {
+  border-radius: 8px !important;
+}
+
+/* 3) Aktiver Tab bekommt links eine schmale Akzentkante, wie die Markierung in Edge */
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected] .tab-background {
+  box-shadow: inset 3px 0 0 var(--focus-outline-color) !important;
+}

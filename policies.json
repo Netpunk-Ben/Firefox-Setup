@@ -80,9 +80,9 @@
         "installation_mode": "normal_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi"
       },
-      "netpunk-dark@netpunk-ben": {
+      "firefox@tampermonkey.net": {
         "installation_mode": "normal_installed",
-        "install_url": "https://raw.githubusercontent.com/Netpunk-Ben/Firefox-Setup/main/theme/netpunk-dark.xpi"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/latest.xpi"
       }
     },
     "3rdparty": {
@@ -112,11 +112,6 @@
           }
         }
       }
-    },
-    "Extensions": {
-      "Install": [
-        "https://addons.mozilla.org/firefox/downloads/latest/ttv-lol-pro/latest.xpi"
-      ]
     }
   }
 }

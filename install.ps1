@@ -58,5 +58,9 @@ foreach ($p in Get-Profiles) {
     Write-Host "user.js und userChrome.css geschrieben: $($p.Name)"
 }
 
-Write-Host "`nFertig. Firefox oeffnet jetzt die Sync-Anmeldung."
+$AdGuardExtra = "https://userscripts.adtidy.org/release/adguard-extra/1.0/adguard-extra.user.js"
+Write-Host "`nFertig. Firefox oeffnet jetzt die Sync-Anmeldung und AdGuard Extra."
+Write-Host "Im Tampermonkey-Tab auf Installieren klicken. Steht dort nur Quelltext, ist Tampermonkey noch nicht fertig: Tab neu laden."
 Start-Process "$FfDir\firefox.exe" -ArgumentList "about:preferences#sync"
+Start-Sleep -Seconds 8
+Start-Process "$FfDir\firefox.exe" -ArgumentList $AdGuardExtra

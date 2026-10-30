@@ -66,6 +66,10 @@ while IFS= read -r prof; do
   echo "user.js und userChrome.css geschrieben: $prof"
 done < <(find_profiles)
 
+ADGUARD_EXTRA="https://userscripts.adtidy.org/release/adguard-extra/1.0/adguard-extra.user.js"
 echo
-echo "Fertig. Firefox oeffnet jetzt die Sync-Anmeldung."
+echo "Fertig. Firefox oeffnet jetzt die Sync-Anmeldung und AdGuard Extra."
+echo "Im Tampermonkey-Tab auf Installieren klicken. Steht dort nur Quelltext, ist Tampermonkey noch nicht fertig: Tab neu laden."
 "$FF_BIN" "about:preferences#sync" >/dev/null 2>&1 &
+sleep 8
+"$FF_BIN" "$ADGUARD_EXTRA" >/dev/null 2>&1 &

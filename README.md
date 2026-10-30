@@ -4,13 +4,29 @@ Eigenes Firefox-Setup als Code. Basis ist Betterfox, darauf liegen eigene Overri
 
 ## Inhalt
 
-`policies.json` regelt alles, was Firefox systemweit erzwingen soll: Telemetrie aus, Tracking-Schutz, DNS over HTTPS, HTTPS-only, keine Werbung auf der Startseite, Erweiterungen inklusive uBlock-Filterlisten.
+`policies.json` regelt alles, was Firefox systemweit erzwingen soll: Telemetrie aus, Tracking-Schutz, DNS over HTTPS, HTTPS-only, keine Werbung auf der Startseite, Erweiterungen inklusive uBlock-Filterlisten und Tampermonkey fuer AdGuard Extra.
 
 `user-overrides.js` enthaelt die persoenlichen Einstellungen. Das Skript laedt bei jedem Lauf die aktuelle Betterfox user.js und haengt diese Datei hinten an.
 
 `edge-bookmarks.ps1` wandelt die Edge-Favoriten einmalig in eine Firefox-Lesezeichensicherung um (siehe unten).
 
 `install.ps1` (Windows) und `install.sh` (macOS, Linux) installieren Firefox bei Bedarf, legen die Policies ab und schreiben die user.js in alle vorhandenen Profile.
+
+## Edge-Verhalten
+
+Optik und Bedienung sind an Edge angelehnt: vertikale Tabs, die beim Ueberfahren ausklappen, Tab-Gruppen, geteilte Ansicht, Vorschaukarten auf Tabs, Systemtheme mit Mica-Hintergrund unter Windows 11 und die Favoritenleiste immer sichtbar. Neue Tabs aus Links landen direkt unter dem aktuellen, Strg+T haengt ans Ende, Strg+Tab geht der Reihe nach durch.
+
+## Twitch ohne Werbung
+
+Wie in Edge laeuft das ueber AdGuard Extra, hier als Userscript in Tampermonkey. Normale Werbung erledigt uBlock Origin, das in Firefox die Rolle der AdGuard-Erweiterung uebernimmt. Tampermonkey wird per Policy installiert, das Skript selbst muss einmal von Hand bestaetigt werden; das Installskript oeffnet die Seite dafuer automatisch:
+
+    https://userscripts.adtidy.org/release/adguard-extra/1.0/adguard-extra.user.js
+
+Keine zweite Twitch-Loesung parallel betreiben (TTV LOL PRO, Purple AdBlock, vaft), die kommen sich gegenseitig in die Quere. Falls AdGuard Extra irgendwann nicht mehr reicht, das Skript in Tampermonkey deaktivieren und stattdessen TTV LOL PRO nehmen.
+
+## Eigenes Theme
+
+netpunk-dark ist voruebergehend aus Policies und user.js genommen. Die Datei theme/netpunk-dark.xpi lag nie im Repo, ausserdem installiert Firefox nur signierte Erweiterungen, auch Themes. Fuer eine Rueckkehr das Theme bei addons.mozilla.org als nicht gelistet signieren lassen (web-ext sign --channel=unlisted), die signierte .xpi unter theme/ ablegen und die beiden Eintraege wieder aktivieren. Mica funktioniert nur mit dem Systemtheme.
 
 ## Neuer Rechner
 

@@ -10,8 +10,10 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // userC
 user_pref("browser.nova.enabled", true);
 user_pref("browser.compactmode.show", true);
 user_pref("browser.uidensity", 1);
-// Eigenes Theme aus theme/netpunk-dark.xpi
-user_pref("extensions.activeThemeID", "netpunk-dark@netpunk-ben");
+// Systemtheme wie Edge (hell/dunkel nach Windows). netpunk-dark ist vorerst raus, siehe README
+user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
+// Mica-Hintergrund von Windows 11 in Titel- und Tableiste, wie Edge (greift nur mit Systemtheme)
+user_pref("widget.windows.mica", true);
 // Webseiten immer hell darstellen, unabhaengig vom dunklen Firefox-Theme (0 = dunkel, 1 = hell, 2 = wie Theme)
 user_pref("layout.css.prefers-color-scheme.content-override", 1);
 user_pref("browser.toolbars.bookmarks.visibility", "always");   // wie die Edge-Favoritenleiste
@@ -25,6 +27,18 @@ user_pref("browser.tabs.groups.enabled", true);
 user_pref("sidebar.visibility", "expand-on-hover");
 user_pref("sidebar.expandOnHover", true);
 user_pref("sidebar.animation.expand-on-hover.duration-ms", 200);
+
+/** TAB-VERHALTEN WIE EDGE ***/
+user_pref("browser.tabs.insertRelatedAfterCurrent", true);  // Links aus einem Tab landen direkt darunter
+user_pref("browser.tabs.insertAfterCurrent", false);        // Strg+T haengt den neuen Tab ans Ende
+user_pref("browser.tabs.selectOwnerOnClose", true);         // nach dem Schliessen zurueck zum Ursprungstab
+user_pref("browser.ctrlTab.sortByRecentlyUsed", false);     // Strg+Tab der Reihe nach, nicht nach Verlauf
+user_pref("browser.tabs.loadInBackground", true);           // Mittelklick oeffnet im Hintergrund
+user_pref("browser.link.open_newwindow", 3);                // Links, die ein neues Fenster wollen, als Tab
+user_pref("browser.tabs.warnOnClose", false);               // keine Rueckfrage beim Schliessen, Sitzung kommt ja wieder
+user_pref("browser.tabs.hoverPreview.enabled", true);       // Vorschaukarte beim Ueberfahren eines Tabs
+user_pref("browser.tabs.hoverPreview.showThumbnails", true);
+user_pref("browser.tabs.splitView.enabled", true);          // geteilte Ansicht: zwei Tabs markieren, Rechtsklick
 
 /** SITZUNG WIEDERHERSTELLEN (Arc, Vivaldi) ***/
 user_pref("browser.startup.page", 3);
