@@ -8,20 +8,25 @@
   --focus-outline-color: #c4a7ff !important;
 }
 
-/* 2) Tableiste heller: das Theme faerbt den Fensterrahmen fast schwarz.
+/* 2) Tableiste heller: das Theme faerbt den Fensterrahmen fast schwarz und legt ein Kopfbild darueber.
       Hier ein dunkles Grau, eine Spur dunkler als die Adressleiste, wie in Edge.
-      Farbe nach Geschmack anpassen. */
+      Nur den Farbwert in der naechsten Zeile aendern. */
 :root {
   --netpunk-tabstrip: #2a2f38;
+}
+:root,
+:root[lwtheme] {
   --lwt-accent-color: var(--netpunk-tabstrip) !important;
   --lwt-accent-color-inactive: var(--netpunk-tabstrip) !important;
+  --toolbox-bgcolor: var(--netpunk-tabstrip) !important;
+  --toolbox-bgcolor-inactive: var(--netpunk-tabstrip) !important;
+  --lwt-header-image: none !important;
+  --lwt-additional-images: none !important;
 }
+:root,
 #navigator-toolbox,
 #titlebar,
 #TabsToolbar {
   background-color: var(--netpunk-tabstrip) !important;
-}
-#titlebar,
-#TabsToolbar {
   background-image: none !important;
 }
