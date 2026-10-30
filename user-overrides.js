@@ -10,23 +10,19 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // userC
 user_pref("browser.nova.enabled", true);
 user_pref("browser.compactmode.show", true);
 user_pref("browser.uidensity", 1);
-// Systemtheme wie Edge (hell/dunkel nach Windows). netpunk-dark ist vorerst raus, siehe README
-user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
-// Mica-Hintergrund von Windows 11 in Titel- und Tableiste, wie Edge (greift nur mit Systemtheme)
-user_pref("widget.windows.mica", true);
+// Eigenes Theme aus theme/netpunk-dark.xpi
+user_pref("extensions.activeThemeID", "netpunk-dark@netpunk-ben");
 // Webseiten immer hell darstellen, unabhaengig vom dunklen Firefox-Theme (0 = dunkel, 1 = hell, 2 = wie Theme)
 user_pref("layout.css.prefers-color-scheme.content-override", 1);
 user_pref("browser.toolbars.bookmarks.visibility", "always");   // wie die Edge-Favoritenleiste
 user_pref("browser.toolbars.bookmarks.showOtherBookmarks", true); // "Weitere Lesezeichen" rechts, wie in Edge
 
-/** VERTIKALE TABS UND TAB-GRUPPEN (Arc, Zen, Edge) ***/
+/** TABS OBEN WIE IN EDGE, TAB-GRUPPEN AN ***/
 user_pref("sidebar.revamp", true);
-user_pref("sidebar.verticalTabs", true);
+user_pref("sidebar.verticalTabs", false);
+user_pref("sidebar.visibility", "hide-sidebar");   // keine Seitenleiste am Rand, nur bei Bedarf ueber das Menue
+user_pref("sidebar.expandOnHover", false);
 user_pref("browser.tabs.groups.enabled", true);
-// Seitenleiste eingeklappt als Symbolleiste, faehrt bei Mausberuehrung aus (wie Edge)
-user_pref("sidebar.visibility", "expand-on-hover");
-user_pref("sidebar.expandOnHover", true);
-user_pref("sidebar.animation.expand-on-hover.duration-ms", 200);
 
 /** TAB-VERHALTEN WIE EDGE ***/
 user_pref("browser.tabs.insertRelatedAfterCurrent", true);  // Links aus einem Tab landen direkt darunter

@@ -14,7 +14,7 @@ Eigenes Firefox-Setup als Code. Basis ist Betterfox, darauf liegen eigene Overri
 
 ## Edge-Verhalten
 
-Optik und Bedienung sind an Edge angelehnt: vertikale Tabs, die beim Ueberfahren ausklappen, Tab-Gruppen, geteilte Ansicht, Vorschaukarten auf Tabs, Systemtheme mit Mica-Hintergrund unter Windows 11 und die Favoritenleiste immer sichtbar. Neue Tabs aus Links landen direkt unter dem aktuellen, Strg+T haengt ans Ende, Strg+Tab geht der Reihe nach durch.
+Optik und Bedienung sind an Edge angelehnt: Tabs oben ohne Seitenleiste, kompakte Darstellung, Tab-Gruppen, geteilte Ansicht, Vorschaukarten auf Tabs, eigenes dunkles Theme und die Favoritenleiste immer sichtbar. Neue Tabs aus Links landen direkt unter dem aktuellen, Strg+T haengt ans Ende, Strg+Tab geht der Reihe nach durch.
 
 ## Twitch ohne Werbung
 
@@ -26,7 +26,7 @@ Keine zweite Twitch-Loesung parallel betreiben (TTV LOL PRO, Purple AdBlock, vaf
 
 ## Eigenes Theme
 
-netpunk-dark ist voruebergehend aus Policies und user.js genommen. Die Datei theme/netpunk-dark.xpi lag nie im Repo, ausserdem installiert Firefox nur signierte Erweiterungen, auch Themes. Fuer eine Rueckkehr das Theme bei addons.mozilla.org als nicht gelistet signieren lassen (web-ext sign --channel=unlisted), die signierte .xpi unter theme/ ablegen und die beiden Eintraege wieder aktivieren. Mica funktioniert nur mit dem Systemtheme.
+netpunk-dark wird per Policy aus theme/netpunk-dark.xpi installiert. Die Datei muss im Repo liegen und von addons.mozilla.org signiert sein (web-ext sign --channel=unlisted), sonst laesst Firefox sie nicht zu und faellt auf das Standardtheme zurueck.
 
 ## Neuer Rechner
 
