@@ -2,31 +2,8 @@
    Kleine, gezielte Anpassungen der Firefox-Oberflaeche (geschrieben gegen den Quellcode von Firefox 157 mit Nova).
    Nach groesseren Firefox-Updates pruefen, ob noch alles greift. */
 
-/* 1) Tuerkis loswerden: Firefox nimmt fuer Hover-Linien und Fokusrahmen die Windows-Akzentfarbe.
+/* Tuerkis loswerden: Firefox nimmt fuer Hover-Linien und Fokusrahmen die Windows-Akzentfarbe.
       Stattdessen ueberall den Theme-Akzent verwenden. */
 :root {
   --focus-outline-color: #c4a7ff !important;
-}
-
-/* 2) Tableiste heller: das Theme faerbt den Fensterrahmen fast schwarz und legt ein Kopfbild darueber.
-      Hier ein dunkles Grau, eine Spur dunkler als die Adressleiste, wie in Edge.
-      Nur den Farbwert in der naechsten Zeile aendern. */
-:root {
-  --netpunk-tabstrip: #2a2f38;
-}
-:root,
-:root[lwtheme] {
-  --lwt-accent-color: var(--netpunk-tabstrip) !important;
-  --lwt-accent-color-inactive: var(--netpunk-tabstrip) !important;
-  --toolbox-bgcolor: var(--netpunk-tabstrip) !important;
-  --toolbox-bgcolor-inactive: var(--netpunk-tabstrip) !important;
-  --lwt-header-image: none !important;
-  --lwt-additional-images: none !important;
-}
-:root,
-#navigator-toolbox,
-#titlebar,
-#TabsToolbar {
-  background-color: var(--netpunk-tabstrip) !important;
-  background-image: none !important;
 }

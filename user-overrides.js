@@ -10,8 +10,6 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // userC
 user_pref("browser.nova.enabled", true);
 user_pref("browser.compactmode.show", true);
 user_pref("browser.uidensity", 1);
-// Eigenes Theme aus theme/netpunk-dark.xpi
-user_pref("extensions.activeThemeID", "netpunk-dark@netpunk-ben");
 // Webseiten immer hell darstellen, unabhaengig vom dunklen Firefox-Theme (0 = dunkel, 1 = hell, 2 = wie Theme)
 user_pref("layout.css.prefers-color-scheme.content-override", 1);
 user_pref("browser.toolbars.bookmarks.visibility", "always");   // wie die Edge-Favoritenleiste
